@@ -14,7 +14,7 @@ A simple command line based volume controller that uses C# to modify audio sourc
 | `-setMute ProcessID,State`   | Set mute for given process ID with state `0` or `1` [True/False]         |  
 | `-setMuteMaster State`   | Set mute for current default device with state `0` or `1` [True/False]       |  
 
-### Output Modifiers
+### Output Modifiers:
 | Option      | Description |
 | ----------- | ----------- |
 | `-silent / -q`   |Prevent Warning and Success outputs (Only display data)|
@@ -24,7 +24,7 @@ A simple command line based volume controller that uses C# to modify audio sourc
 ## Volume Control Service
 The volume control service is meant to make volume control in external programs alot simpler and easier allowing developers to design their own volume control software with the help of this service.
 
-### Getting Started
+### Getting Started:
 | Option      | Description |
 | ----------- | ----------- |
 | `-startService`   |Start service to create a callback.json file and start running|
@@ -74,15 +74,12 @@ This will also create a file called `callbacks.json` in the same folder which fo
     ]
 }
 ```
-### Setting audio source attributes
+### Setting audio source attributes:
 This allows for easy access to device and source details as they will be constantly updated, on top of that you can issue set commands using the `calls` attribute.
-For example settings `calls` to `"-setVol 1234,50"` will set the source `1234` volume to `50` and then reset calls to a empty string.
+For example settings `calls` to `"-setVol 1234,50"` will set the source with process ID `1234` volume to `50` and then reset calls to a empty string.
 
-### Stopping service
+### Stopping service:
 By setting the attribute `stop` to `true` will tell the service to shutdown, right before the shutdown `stop` will be reset back to `false` so its ready for the next start.
-
-## Credits and Tools Used
-This project makes use xenolightning's [AudioSwitcher](https://github.com/xenolightning/AudioSwitcher) .NET Library as well as some basic C# Code 
 
 ### Detailed Breakdown of each attribute
 | Option      | Description |
@@ -93,3 +90,7 @@ This project makes use xenolightning's [AudioSwitcher](https://github.com/xenoli
 | `calls`   |Use any of the previously listed commands to modify audio source values|
 | `device`   |JSON object with all data for currently set default audio output device|
 | `sources`   |JSON Array with JSON Objects of sources that are currently outputting (or at least telling windows they are outputting) audio|
+
+
+## Credits and Tools Used:
+This project makes use xenolightning's [AudioSwitcher](https://github.com/xenolightning/AudioSwitcher) .NET Library as well as some basic C# Code 
