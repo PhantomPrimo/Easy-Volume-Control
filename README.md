@@ -81,6 +81,9 @@ For example settings `calls` to `"-setVol 1234,50"` will set the source `1234` v
 ### Stopping service
 By setting the attribute `stop` to `true` will tell the service to shutdown, right before the shutdown `stop` will be reset back to `false` so its ready for the next start.
 
+## Credits and Tools Used
+This project makes use xenolightning's [AudioSwitcher](https://github.com/xenolightning/AudioSwitcher) .NET Library as well as some basic C# Code 
+
 ### Detailed Breakdown of each attribute
 | Option      | Description |
 | ----------- | ----------- |
