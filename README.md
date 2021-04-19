@@ -17,7 +17,7 @@ A simple command line based volume controller that uses C# to modify audio sourc
 ### Output Modifiers:
 | Option      | Description |
 | ----------- | ----------- |
-| `-silent / -q`   |Prevent Warning and Success outputs (Only display data)|
+| `-silent / -q`   |Hide warnings and success prompts in console|
 | `-clear`   |Clear any compile time warnings from console|   
 | `-json`   |Output all data in json format for easy read and use in external programs|
 
